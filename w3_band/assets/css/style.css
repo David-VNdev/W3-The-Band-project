@@ -1,0 +1,23 @@
+/* reset CSS */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* 
+1.Position
+2.Size
+3.Color
+4.Design
+ */
+#main {
+}
+#header {
+}
+#slider {
+}
+#content {
+}
+#footer {
+}

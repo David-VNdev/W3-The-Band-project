@@ -178,7 +178,9 @@ ul {
 .tour-section {
   background-color: #000;
 }
-
+.tour-section {
+  padding-bottom: 64px;
+}
 .ticket-list {
   background-color: #fff;
   text-align: left;
@@ -232,18 +234,143 @@ ul {
 .place-text {
   text-align: left;
   padding: 0 16px;
+  line-height: 1.5rem;
 }
 
 .place-list .place-text {
   background-color: #fff;
+  overflow: hidden;
+  font-size: 15px;
+  font-weight: 500;
 }
-.place-list .place-name {
+
+.place-list .place-text .place-name {
+  font-size: 15px;
+  font-weight: 600;
 }
-.place-list .place-time {
+.place-name {
+  margin-top: 15px;
 }
-.place-list .place-desc {
+.place-time {
+  margin-top: 15px;
+  color: #757575;
 }
-.place-list .place-buy-btn {
+.place-desc {
+  margin-top: 15px;
+  margin-bottom: 16px;
+}
+.place-buy-btn {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #000;
+  color: #fff;
+  padding: 8px 16px;
+  margin-bottom: 15px;
+}
+
+.place-buy-btn:hover {
+  color: #000;
+  background-color: rgb(204, 204, 204);
 }
 #footer {
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 100px;
+  z-index: 2;
+  display: none;
+}
+
+.modal.open {
+  display: flex;
+}
+.modal-container {
+  background-color: #fff;
+  max-width: 100%;
+
+  position: absolute;
+  /* transform: translateX(-50%); */
+  left: 50px;
+  right: 50px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.top-close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 8px 16px;
+  color: #ccc;
+  line-height: 36px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.top-close-btn:hover {
+  color: #000;
+  background-color: #ccc;
+}
+.modal-header {
+  text-align: center;
+  background-color: rgb(0, 150, 136);
+  color: #fff;
+  font-size: 30px;
+  height: 129px;
+  vertical-align: center;
+  line-height: 129px;
+  letter-spacing: 4px;
+}
+
+.modal-body {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.modal-body label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.modal-body input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 24px;
+}
+
+#buy-ticket {
+  margin: 16px 0;
+  padding: 16px;
+  width: 100%;
+  text-transform: uppercase;
+  background-color: rgb(0, 150, 136);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#buy-ticket:hover {
+  opacity: 0.9;
+}
+
+.help-link {
+  width: 100%;
+  text-align: right;
+  padding-bottom: 22px;
+  font-size: 15px;
+}
+
+.class-link a,
+.class-link a :visited {
+  color: #2196f3;
+}
+
+.bottom-close-btn {
 }

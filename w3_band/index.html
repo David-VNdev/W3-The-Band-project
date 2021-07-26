@@ -115,7 +115,9 @@
                   <p class="place-desc">
                     Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                   </p>
-                  <a href="#" class="place-buy-btn">Buy Tickets</a>
+                  <button class="js-buy-ticket place-buy-btn">
+                    Buy Tickets
+                  </button>
                 </div>
               </div>
               <div class="place">
@@ -126,7 +128,9 @@
                   <p class="place-desc">
                     Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                   </p>
-                  <a href="#" class="place-buy-btn">Buy Tickets</a>
+                  <button class="js-buy-ticket place-buy-btn">
+                    Buy Tickets
+                  </button>
                 </div>
               </div>
               <div class="place">
@@ -137,7 +141,9 @@
                   <p class="place-desc">
                     Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                   </p>
-                  <a href="#" class="place-buy-btn">Buy Tickets</a>
+                  <button class="js-buy-ticket place-buy-btn">
+                    Buy Tickets
+                  </button>
                 </div>
               </div>
             </div>
@@ -151,5 +157,62 @@
       </div>
       <div id="footer"></div>
     </div>
+    <div class="modal js-modal">
+      <div class="modal-container">
+        <div class="top-close-btn js-modal-close">
+          <i class="fas fa-times"></i>
+        </div>
+        <header class="modal-header">
+          <i class="fas fa-suitcase"> </i> Tickets
+        </header>
+        <div class="modal-body">
+          <label for="ticket-quantity" class="modal-label"
+            ><i class="fas fa-shopping-cart"></i> Tickets, $15 per person</label
+          >
+          <input
+            id="ticket-quantity"
+            type="text"
+            class="ticket-modal"
+            placeholder="How many?"
+          />
+          <label for="ticket-email" class="modal-label"
+            ><i class="fas fa-user"></i> Send to</label
+          >
+          <input
+            id="ticket-email"
+            type="email"
+            class="modal-input"
+            placeholder="Enter email?"
+          />
+          <button id="buy-ticket">Pay <i class="fas fa-check"></i></button>
+          <div class="help-link">Need <a href="">help?</a></div>
+        </div>
+      </div>
+    </div>
   </body>
+
+  <script>
+    const buyBtns = document.querySelectorAll(".js-buy-ticket");
+    const modal = document.querySelector(".js-modal");
+    const closeBtn = document.querySelector(".js-modal-close");
+    const showBuyTickets = () => {
+      modal.classList.add("open");
+    };
+    const closeBuyTickets = () => {
+      modal.classList.remove("open");
+    };
+
+    buyBtns.forEach((buyBtn) =>
+      buyBtn.addEventListener("click", showBuyTickets)
+    );
+
+    closeBtn.addEventListener("click", closeBuyTickets);
+
+    //
+    const modalContainer = document.querySelector(".modal-container");
+
+    //
+    modal.addEventListener("click", closeBuyTickets);
+    modalContainer.addEventListener("click", showBuyTickets);
+  </script>
 </html>

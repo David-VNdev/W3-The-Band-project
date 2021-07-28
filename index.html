@@ -3,11 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="wath=
-    , initial-scale=1.0"
-    />
     <title>Document</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
     <!-- <link rel="stylesheet" href="./assets/icons and fonts/themify-icons.css" /> -->
@@ -64,30 +59,18 @@
             veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
             ea commodo consequat.
           </p>
-          <div class="member-list">
-            <div class="member">
+          <div class="member-list row">
+            <div class="col col-3">
               <div class="member-name">Name</div>
-              <img
-                src="/w3_band//assets/img/bandmember.jpg"
-                alt=""
-                class="member-img"
-              />
+              <img src="/assets/img/bandmember.jpg" alt="" class="member-img" />
             </div>
-            <div class="member">
+            <div class="col col-3">
               <div class="member-name">Name</div>
-              <img
-                src="/w3_band//assets/img/bandmember.jpg"
-                alt=""
-                class="member-img"
-              />
+              <img src="/assets/img/bandmember.jpg" alt="" class="member-img" />
             </div>
-            <div class="member">
+            <div class="col col-3">
               <div class="member-name">Name</div>
-              <img
-                src="/w3_band//assets/img/bandmember.jpg"
-                alt=""
-                class="member-img"
-              />
+              <img src="/assets/img/bandmember.jpg" alt="" class="member-img" />
             </div>
             <div class="clear-float"></div>
           </div>
@@ -106,88 +89,170 @@
               <li>November <span class="quantity">3</span></li>
             </ul>
             <!-- Places -->
-            <div class="place-list">
-              <div class="place">
-                <img src="/w3_band/assets/img/newyork.jpg" alt="newyork" />
+            <div class="row place-list">
+              <div class="col col-3">
+                <img
+                  class="place-img"
+                  src="/assets/img/newyork.jpg"
+                  alt="newyork"
+                />
                 <div class="place-text">
                   <h3 class="place-name">New York</h3>
                   <p class="place-time">Fri 27 Nov 2016</p>
                   <p class="place-desc">
                     Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                   </p>
-                  <button class="js-buy-ticket place-buy-btn">
-                    Buy Tickets
-                  </button>
+                  <button class="js-buy-ticket btn">Buy Tickets</button>
                 </div>
               </div>
-              <div class="place">
-                <img src="/w3_band/assets/img/paris.jpg" alt="paris" />
+              <div class="col col-3">
+                <img
+                  class="place-img"
+                  src="/assets/img/paris.jpg"
+                  alt="paris"
+                />
                 <div class="place-text">
                   <h3 class="place-name">Paris</h3>
                   <p class="place-time">Sat 28 Nov 2016</p>
                   <p class="place-desc">
                     Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                   </p>
-                  <button class="js-buy-ticket place-buy-btn">
-                    Buy Tickets
-                  </button>
+                  <button class="js-buy-ticket btn">Buy Tickets</button>
                 </div>
               </div>
-              <div class="place">
-                <img src="/w3_band/assets/img/sanfran.jpg" alt="sanfran" />
+              <div class="col col-3">
+                <img
+                  class="place-img"
+                  src="/assets/img/sanfran.jpg"
+                  alt="sanfran"
+                />
                 <div class="place-text">
                   <h3 class="place-name">San Francisco</h3>
                   <p class="place-time">Sun 29 Nov 2016</p>
                   <p class="place-desc">
                     Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                   </p>
-                  <button class="js-buy-ticket place-buy-btn">
-                    Buy Tickets
-                  </button>
+                  <button class="js-buy-ticket btn">Buy Tickets</button>
                 </div>
               </div>
+              <div class="clear-float"></div>
             </div>
           </div>
         </div>
         <!-- Contact section -->
         <div class="content-section">
-          <h2 class="section-heading">The band</h2>
-          <p class="section-sub-heading">We love music</p>
+          <h2 class="section-heading">Contact</h2>
+          <p class="section-sub-heading">Fan? Drop a note!</p>
+          <div class="contact-content contact-info row">
+            <div class="col col-2 text-align-left">
+              <p><i class="fas fa-map-marker-alt"> </i> Chicago, US</p>
+              <p><i class="fas fa-phone-alt"></i> Phone: +00 151515</p>
+              <p><i class="fas fa-envelope"></i> Email: mail@mail.com</p>
+            </div>
+            <div class="col col-2 contact-form">
+              <form action="">
+                <div class="row">
+                  <div class="col col-2">
+                    <input
+                      class="form-control"
+                      type="text"
+                      placeholder="Name"
+                      required
+                    />
+                  </div>
+                  <div class="col col-2">
+                    <input
+                      class="form-control"
+                      type="email"
+                      placeholder="Email"
+                      required
+                    />
+                  </div>
+                  <div class="clear-float"></div>
+                </div>
+
+                <div class="row mt-8">
+                  <div class="col">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Message"
+                    />
+                  </div>
+                  <div class="clear-float"></div>
+                </div>
+                <input
+                  class="mt-16 btn pull-right"
+                  type="submit"
+                  value="SEND"
+                />
+
+                <div class="clear-float"></div>
+              </form>
+            </div>
+            <div class="clear-float"></div>
+          </div>
+        </div>
+        <!-- Map image -->
+        <div class="map-section">
+          <img src="/assets/img/map.jpg" alt="map" />
         </div>
       </div>
-      <div id="footer"></div>
-    </div>
-    <div class="modal js-modal">
-      <div class="modal-container">
-        <div class="top-close-btn js-modal-close">
-          <i class="fas fa-times"></i>
-        </div>
-        <header class="modal-header">
-          <i class="fas fa-suitcase"> </i> Tickets
-        </header>
-        <div class="modal-body">
-          <label for="ticket-quantity" class="modal-label"
-            ><i class="fas fa-shopping-cart"></i> Tickets, $15 per person</label
-          >
-          <input
-            id="ticket-quantity"
-            type="text"
-            class="ticket-modal"
-            placeholder="How many?"
-          />
-          <label for="ticket-email" class="modal-label"
-            ><i class="fas fa-user"></i> Send to</label
-          >
-          <input
-            id="ticket-email"
-            type="email"
-            class="modal-input"
-            placeholder="Enter email?"
-          />
-          <button id="buy-ticket">Pay <i class="fas fa-check"></i></button>
-          <div class="help-link">Need <a href="">help?</a></div>
+      <div id="footer">
+        <a href="https://www.facebook.com/"
+          ><i class="fab fa-facebook-square"></i
+        ></a>
+        <a href="https://www.instagram.com/"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="https://www.snapchat.com/"><i class="fab fa-snapchat"></i></a>
+        <a href="https://www.pinterest.com/"
+          ><i class="fab fa-pinterest-p"></i
+        ></a>
+        <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
+        <p>
+          Powered by
+          <a href="https://github.com/David-VNdev/F8-w3-web">David Bui</a>
+        </p>
+      </div>
+      <!-- modal -->
+      <div class="modal js-modal">
+        <div class="modal-container js-modal-container">
+          <div class="top-close-btn js-modal-close">
+            <i class="fas fa-times"></i>
+          </div>
+          <header class="modal-header">
+            <i class="fas fa-suitcase"> </i> Tickets
+          </header>
+          <div class="modal-body">
+            <label for="ticket-quantity" class="modal-label"
+              ><i class="fas fa-shopping-cart"></i> Tickets, $15 per
+              person</label
+            >
+            <input
+              id="ticket-quantity"
+              type="text"
+              class="ticket-modal"
+              placeholder="How many?"
+            />
+            <label for="ticket-email" class="modal-label"
+              ><i class="fas fa-user"></i> Send to</label
+            >
+            <input
+              id="ticket-email"
+              type="email"
+              class="modal-input"
+              placeholder="Enter email?"
+            />
+            <button id="buy-ticket">Pay <i class="fas fa-check"></i></button>
+            <div class="help-link">Need <a href="">help?</a></div>
+          </div>
         </div>
       </div>
+      <!-- modal -->
     </div>
   </body>
 
@@ -195,6 +260,7 @@
     const buyBtns = document.querySelectorAll(".js-buy-ticket");
     const modal = document.querySelector(".js-modal");
     const closeBtn = document.querySelector(".js-modal-close");
+    const modalContainer = document.querySelector(".js-modal-container");
     const showBuyTickets = () => {
       modal.classList.add("open");
     };
@@ -207,12 +273,7 @@
     );
 
     closeBtn.addEventListener("click", closeBuyTickets);
-
-    //
-    const modalContainer = document.querySelector(".modal-container");
-
-    //
     modal.addEventListener("click", closeBuyTickets);
-    modalContainer.addEventListener("click", showBuyTickets);
+    modalContainer.addEventListener("click", (e) => e.stopPropagation());
   </script>
 </html>

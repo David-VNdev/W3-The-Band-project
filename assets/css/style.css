@@ -8,19 +8,35 @@
 
 html {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  scroll-behavior: auto;
 }
 
+.auto-height {
+  height: auto !important;
+}
 .text-align-left {
   text-align: left;
 }
 /* Common */
+.visible-overflow {
+  overflow: visible !important;
+}
+
+.block {
+  display: block !important;
+}
+
+.visible {
+  display: visible !important;
+}
+
 .text-white {
   color: #fff !important;
 }
 
 .pull-right {
   float: right !important;
-  width: min-content !important;
+  width: min-content !important ;
 }
 
 .clear-float {
@@ -75,6 +91,7 @@ html {
   background-color: rgb(204, 204, 204);
   cursor: pointer;
 }
+
 /* End common */
 /* 
 1.From outside in 
@@ -92,12 +109,12 @@ html {
 }
 
 #header {
-  height: 46px;
   background-color: #000;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 1;
+  height: 46px;
 }
 
 ul {
@@ -130,7 +147,7 @@ ul {
   top: 100%;
   left: 0;
 }
-#nav .subnav {
+#nav li .subnav {
   display: none;
   position: absolute;
   background-color: #fff;
@@ -145,16 +162,21 @@ ul {
   line-height: 38px;
 }
 
+#header .hamburger-btn,
 #header .search-btn {
   color: white;
   font-size: 20px;
   float: right;
   height: 46px;
-  width: 46px;
+  width: 64px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+#header .hamburger-btn {
+  display: none;
+}
+
 #header .search-btn:hover {
   background-color: #f44336;
   cursor: pointer;
@@ -190,9 +212,11 @@ ul {
 
 .content-section {
   margin: auto;
-  width: 800px;
+  max-width: 800px;
   padding: 64px 0 126px;
   text-align: center;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .content-section .section-heading {
@@ -367,7 +391,14 @@ ul {
 .contact-info {
   font-size: 18px;
 }
+.contact-info a {
+  color: #184df2;
+  opacity: 0.8;
+}
 
+.contact-info a:hover {
+  opacity: 1;
+}
 .contact-info i[class*="fa-"] {
   display: inline-block;
   width: 30px;
@@ -404,11 +435,7 @@ ul {
 }
 
 #footer a {
-  color: #000;
-}
-
-#footer a:visited {
-  color: #000;
+  color: inherit;
 }
 
 #footer {
@@ -452,7 +479,7 @@ ul {
   color: white;
   border: none;
   cursor: pointer;
-}
+} 
 
 #buy-ticket:hover {
   opacity: 0.9;
@@ -480,3 +507,11 @@ ul {
     transform: translateY(0);
   }
 }
+
+/* 
+PC >= 1024px;
+Table 740px -> 1024x;
+mobile <740px
+ */
+
+/* responsive */

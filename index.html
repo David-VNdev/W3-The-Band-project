@@ -3,8 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Document</title>
+    <title>W3 - The band project</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
+
     <!-- <link rel="stylesheet" href="./assets/icons and fonts/themify-icons.css" /> -->
     <!-- <link rel="stylesheet" href="./assets/./icons and fonts/fa.css" /> -->
     <link
@@ -18,21 +20,24 @@
     <div id="main">
       <div id="header">
         <ul id="nav">
-          <li><a href="">Home</a></li>
-          <li><a href="">Band</a></li>
-          <li><a href="">Tour</a></li>
-          <li><a href="">Contact</a></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#band">Band</a></li>
+          <li><a href="#tour">Tour</a></li>
+          <li><a href="#contact">Contact</a></li>
           <li>
             <a href="#"
               >More <i class="nav-arrow-down fa fa-caret-down"> </i>
             </a>
             <ul class="subnav">
-              <li><a href="">Merchandise</a></li>
-              <li><a href="">Extras</a></li>
-              <li><a href="">Media</a></li>
+              <li><a href="#">Merchandise</a></li>
+              <li><a href="#">Extras</a></li>
+              <li><a href="#">Media</a></li>
             </ul>
           </li>
           <div class="search-btn"><i class="fas fa-search"></i></div>
+          <div class="hamburger-btn">
+            <i class="fas fa-bars"></i>
+          </div>
         </ul>
       </div>
       <div id="slider">
@@ -43,7 +48,7 @@
       </div>
       <div id="content">
         <!-- About -->
-        <div class="content-section">
+        <div id="band" class="content-section">
           <h2 class="section-heading">The band</h2>
           <p class="section-sub-heading">We love music</p>
           <p class="about-text">
@@ -76,7 +81,7 @@
           </div>
         </div>
         <!-- Tour section -->
-        <div class="tour-section">
+        <div id="tour" class="tour-section">
           <div class="content-section">
             <h2 class="section-heading text-white">Tour day</h2>
             <p class="section-sub-heading text-white">
@@ -102,7 +107,9 @@
                   <p class="place-desc">
                     Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                   </p>
-                  <button class="js-buy-ticket btn">Buy Tickets</button>
+                  <button class="js-buy-ticket mobile-full-width btn">
+                    Buy Tickets
+                  </button>
                 </div>
               </div>
               <div class="col col-3">
@@ -117,7 +124,9 @@
                   <p class="place-desc">
                     Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                   </p>
-                  <button class="js-buy-ticket btn">Buy Tickets</button>
+                  <button class="js-buy-ticket mobile-full-width btn">
+                    Buy Tickets
+                  </button>
                 </div>
               </div>
               <div class="col col-3">
@@ -132,7 +141,9 @@
                   <p class="place-desc">
                     Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                   </p>
-                  <button class="js-buy-ticket btn">Buy Tickets</button>
+                  <button class="js-buy-ticket mobile-full-width btn">
+                    Buy Tickets
+                  </button>
                 </div>
               </div>
               <div class="clear-float"></div>
@@ -140,14 +151,20 @@
           </div>
         </div>
         <!-- Contact section -->
-        <div class="content-section">
+        <div id="contact" class="content-section">
           <h2 class="section-heading">Contact</h2>
           <p class="section-sub-heading">Fan? Drop a note!</p>
           <div class="contact-content contact-info row">
             <div class="col col-2 text-align-left">
               <p><i class="fas fa-map-marker-alt"> </i> Chicago, US</p>
-              <p><i class="fas fa-phone-alt"></i> Phone: +00 151515</p>
-              <p><i class="fas fa-envelope"></i> Email: mail@mail.com</p>
+              <p>
+                <i class="fas fa-phone-alt"></i>Phone:
+                <a href="tel:+00 151515">+00 151515</a>
+              </p>
+              <p>
+                <i class="fas fa-envelope"></i>Email:
+                <a href="mailto:mail@mail.com"> mail@mail.com</a>
+              </p>
             </div>
             <div class="col col-2 contact-form">
               <form action="">
@@ -162,7 +179,7 @@
                   </div>
                   <div class="col col-2">
                     <input
-                      class="form-control"
+                      class="form-control s-mt-8"
                       type="email"
                       placeholder="Email"
                       required
@@ -171,7 +188,7 @@
                   <div class="clear-float"></div>
                 </div>
 
-                <div class="row mt-8">
+                <div class="row mt-8 s-mt-8">
                   <div class="col">
                     <input
                       type="text"
@@ -182,7 +199,7 @@
                   <div class="clear-float"></div>
                 </div>
                 <input
-                  class="mt-16 btn pull-right"
+                  class="mt-16 btn pull-right mobile-full-width"
                   type="submit"
                   value="SEND"
                 />
@@ -199,23 +216,29 @@
         </div>
       </div>
       <div id="footer">
-        <a href="https://www.facebook.com/"
+        <a target="_blank" href="https://www.facebook.com/"
           ><i class="fab fa-facebook-square"></i
         ></a>
-        <a href="https://www.instagram.com/"
+        <a target="_blank" href="https://www.instagram.com/"
           ><i class="fab fa-instagram"></i
         ></a>
-        <a href="https://www.snapchat.com/"><i class="fab fa-snapchat"></i></a>
-        <a href="https://www.pinterest.com/"
+        <a target="_blank" href="https://www.snapchat.com/ "
+          ><i class="fab fa-snapchat"></i
+        ></a>
+        <a target="_blank" href="https://www.pinterest.com/"
           ><i class="fab fa-pinterest-p"></i
         ></a>
-        <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.linkedin.com/"
+        <a target="_blank" href="https://www.twitter.com/"
+          ><i class="fab fa-twitter"></i
+        ></a>
+        <a target="_blank" href="https://www.linkedin.com/"
           ><i class="fab fa-linkedin-in"></i
         ></a>
         <p>
           Powered by
-          <a href="https://github.com/David-VNdev/F8-w3-web">David Bui</a>
+          <a target="_blank" href="https://github.com/David-VNdev/F8-w3-web"
+            >David Bui</a
+          >
         </p>
       </div>
       <!-- modal -->
@@ -257,10 +280,12 @@
   </body>
 
   <script>
+    // Script for modal
     const buyBtns = document.querySelectorAll(".js-buy-ticket");
     const modal = document.querySelector(".js-modal");
     const closeBtn = document.querySelector(".js-modal-close");
     const modalContainer = document.querySelector(".js-modal-container");
+    const mobileWidth = 740;
     const showBuyTickets = () => {
       modal.classList.add("open");
     };
@@ -275,5 +300,46 @@
     closeBtn.addEventListener("click", closeBuyTickets);
     modal.addEventListener("click", closeBuyTickets);
     modalContainer.addEventListener("click", (e) => e.stopPropagation());
+
+    //toggle header
+
+    const header = document.getElementById("header");
+    const hamburgerBtn = document.querySelector(".hamburger-btn");
+    const navLinks = document.querySelectorAll("#nav > li");
+    const headerSubMenu = document.querySelector("#header .subnav");
+    const moreBtn = navLinks[navLinks.length - 1];
+    function hideHeader() {
+      for (var i = 1; i < navLinks.length; i++)
+        navLinks[i].classList.add("hidden");
+      // headerSubMenu.classList.remove("block");
+    }
+
+    function openHeader() {
+      for (var i = 1; i < navLinks.length; i++)
+        navLinks[i].classList.remove("hidden");
+    }
+    if (header.clientWidth < mobileWidth) {
+      hideHeader();
+      // toggle header when click hamburgerBtn
+      hamburgerBtn.addEventListener("click", () => {
+        navLinks[1].classList.contains("hidden") ? openHeader() : hideHeader();
+      });
+
+      for (var i = 1; i < navLinks.length - 1; i++)
+        navLinks[i].addEventListener("click", () => hideHeader());
+
+      //toggle header sub menu
+      moreBtn.addEventListener("click", function (event) {
+        event.preventDefault();
+        console.log(1);
+        headerSubMenu.classList.contains("hidden")
+          ? headerSubMenu.classList.remove("hidden")
+          : headerSubMenu.classList.add("hidden");
+      });
+    } else {
+      openHeader();
+
+      headerSubMenu.classList.remove("hidden");
+    }
   </script>
 </html>

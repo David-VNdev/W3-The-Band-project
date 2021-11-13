@@ -163,19 +163,66 @@
 		</div>
 
 		<div class="modal">
-			<div class="modal-container"></div>
-			<div class="close"><i class="fas fa-times"></i></div>
-			<header class="modal-header">
-				<i class="fas fa-suitcase"></i>
-				Tickets
-			</header>
-			<div class="modal-body">
-				<label class="modal-label">
-                    <i class="fas fa-shopping-cart"></i>
-                    Ticket, $15 per person
+			<div class="modal-container">
+				<header class="modal-header">
+					<div class="close"><i class="fas fa-times"></i></div>
 
-                </label>
+					<i class="fas fa-suitcase"></i>
+					Tickets
+				</header>
+				<div class="modal-body">
+					<label class="modal-label" for="ticket-quantity">
+						<i class="fas fa-shopping-cart"></i>
+						Ticket, $15 per person
+					</label>
+					<input
+						type="text"
+						class="modal-input"
+						id="ticket-quantity"
+						placeholder="How many"
+					/>
+					<label class="modal-label" for="user-email">
+						<i class="fas fa-user"></i>
+						Send to
+					</label>
+					<input
+						type="email"
+						id="user-email"
+						class="modal-input"
+						placeholder="Enter email..."
+					/>
+
+					<button id="buy-ticket-btn">Pay <i class="fas fa-check"></i></button>
+					<footer class="modal-footer">
+						<p class="modal-help">Need <a href="">help?</a></p>
+					</footer>
+				</div>
 			</div>
 		</div>
 	</body>
+	<script>
+		const $ = document.querySelector.bind(document);
+		const $$ = document.querySelectorAll.bind(document);
+
+		const buyTicketBtns = $$(".buy-ticket-btn");
+		console.log(buyTicketBtns);
+		buyTicketBtns.forEach(function (btn) {
+			btn.onclick = () => {
+				$(".modal").classList.add("show");
+			};
+		});
+
+		for (const buyBtn of buyTicketBtns) {
+			console.log(buyBtn);
+		}
+		$(".modal").onclick = (e) => {
+			if (e.target.classList.contains("modal")) {
+				$(".modal").classList.remove("show");
+			}
+		};
+
+		$(".modal .close").onclick = () => {
+			$(".modal.show").classList.remove("show");
+		};
+	</script>
 </html>

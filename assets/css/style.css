@@ -20,7 +20,24 @@
 	font-family: "Noto Sans", sans-serif;
 }
 
+/* Common CSS */
+.row {
+	margin-left: -8px;
+	margin-right: -8px;
+	display: flex;
+}
 
+.col {
+	/* float: left; */
+	padding-left: 8px;
+	padding-right: 8px;
+	display: inline-block;
+	width: 100%;
+}
+
+.col-6 {
+	width: calc(100% / 12 * 6);
+}
 
 .max-width-1200 {
 	max-width: 1200px;
@@ -298,6 +315,46 @@
 	color: #000;
 }
 
+/* Contact body */
+.contact-content {
+	padding: 32px 16px;
+	margin-top: 48px;
+}
+
+.contact-info {
+	font-size: 1.4em;
+}
+
+.contact-info p {
+	margin-bottom: 10px;
+}
+
+.contact-info i {
+	width: 25px;
+}
+
+.contact-form {
+}
+
+.contact-form .row input{
+	width: 100%;
+	padding: 8px;
+	border: 1px solid #ccc;
+	margin-top: 5px;
+	height: 38px;
+}
+
+.contact-form .contact-form-submit-btn{
+display: block;
+	padding: 8px;
+	color: #fff;
+	background-color: #000;
+	justify-self: center;
+	border: none;
+	margin-left: auto;
+	margin-top: 15px;
+}
+
 #footer {
 }
 
@@ -311,18 +368,32 @@
 	background-color: rgba(0, 0, 0, 0.3);
 	z-index: 2;
 	padding-top: 100px;
-	padding-left:10px;
+	padding-left: 10px;
 	padding-right: 10px;
 	display: none;
 }
 
-.modal.show{
+.modal.show {
 	display: block !important;
 }
 .modal-container {
 	background-color: #fff;
 	max-width: 900px;
 	margin: auto;
+	animation-name: slidein;
+	animation-duration: 0.7s;
+}
+
+@keyframes slidein {
+	from {
+		transform: translateY(-100%);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateY(0%);
+		opacity: 1;
+	}
 }
 .modal-header {
 	height: 128px;

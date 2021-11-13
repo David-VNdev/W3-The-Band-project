@@ -269,13 +269,14 @@
 .buy-ticket li {
 	padding-left: 8px;
 	padding-right: 8px;
+
 	list-style: none;
 	width: 33.33%;
 }
 
 .buy-ticket .frame {
 	color: #000;
-	padding: 15px 16px 16px 16px;
+	padding: 15px 16px 30px 16px;
 	background-color: #fff;
 }
 
@@ -354,7 +355,11 @@ display: block;
 	margin-left: auto;
 	margin-top: 15px;
 }
-
+.contact-form .contact-form-submit-btn:hover{
+	background-color: #ccc;
+	cursor: pointer;
+	color: #000;
+}
 #footer {
 }
 
@@ -450,6 +455,7 @@ display: block;
 	padding: 16px;
 	outline: none;
 	border: none;
+
 }
 
 #buy-ticket-btn:hover {

@@ -20,7 +20,15 @@
 	font-family: "Noto Sans", sans-serif;
 }
 
+html {
+	scroll-behavior: smooth;
+	display: block;
+}
 /* Common CSS */
+.overflow-hidden {
+	overflow: hidden !important;
+}
+
 .row {
 	margin-left: -8px;
 	margin-right: -8px;
@@ -40,7 +48,8 @@
 }
 
 .max-width-1200 {
-	max-width: 1200px;
+	width: 1200px;
+	max-width: 100%;
 	margin: auto;
 }
 
@@ -52,12 +61,12 @@
 
 #main {
 	--header-height: 46px;
+	overflow: hidden;
 }
 
 #header {
 	background-color: rgb(0, 0, 0);
-	color: rgb(255, 255, 255);
-	height: 46px;
+	color: #ffffff;
 	display: flex;
 	position: fixed;
 	top: 0;
@@ -65,11 +74,12 @@
 	right: 0;
 	justify-content: space-between;
 	z-index: 1;
+	height: var(--header-height);
 }
 
 #nav {
 	display: flex;
-	height: var(--header-height);
+	background-color: rgb(0, 0, 0);
 }
 
 #nav,
@@ -81,6 +91,8 @@
 }
 #nav > li > a {
 	text-transform: uppercase;
+	display: flex;
+	align-items: center;
 }
 #nav li a {
 	text-decoration: none;
@@ -89,12 +101,12 @@
 	color: white;
 	line-height: var(--header-height);
 	padding: 0 24px;
-	display: inline-block;
 }
-#nav li:hover > a {
+#nav li:hover  {
 	color: #000;
 	background-color: #ccc;
 }
+
 #nav .subnav {
 	position: absolute;
 	display: none;
@@ -108,9 +120,12 @@
 }
 
 #nav .subnav li {
+	height: 100%;
 }
 #nav .subnav a {
 	width: 160px;
+	height: 100%;
+	display: block;
 }
 
 .subnav > li > a {
@@ -132,6 +147,9 @@
 	margin: auto;
 }
 
+#hamburger-menu {
+	display: none;
+}
 #slider {
 	background-color: blue;
 	margin-top: var(--header-height);
@@ -160,7 +178,8 @@
 	margin-bottom: 15px;
 }
 .content {
-	max-width: 800px;
+	width: 800px;
+	max-width: 100%;
 	margin: auto;
 }
 .content-section {
@@ -278,6 +297,7 @@
 	color: #000;
 	padding: 15px 16px 30px 16px;
 	background-color: #fff;
+	overflow: hidden;
 }
 
 .frame p {
@@ -320,6 +340,7 @@
 .contact-content {
 	padding: 32px 16px;
 	margin-top: 48px;
+	display: flex;
 }
 
 .contact-info {
@@ -335,9 +356,10 @@
 }
 
 .contact-form {
+	display: flex;
 }
 
-.contact-form .row input{
+.contact-form .row input {
 	width: 100%;
 	padding: 8px;
 	border: 1px solid #ccc;
@@ -345,8 +367,8 @@
 	height: 38px;
 }
 
-.contact-form .contact-form-submit-btn{
-display: block;
+.contact-form .contact-form-submit-btn {
+	display: block;
 	padding: 8px;
 	color: #fff;
 	background-color: #000;
@@ -355,12 +377,36 @@ display: block;
 	margin-left: auto;
 	margin-top: 15px;
 }
-.contact-form .contact-form-submit-btn:hover{
+.contact-form .contact-form-submit-btn:hover {
 	background-color: #ccc;
 	cursor: pointer;
 	color: #000;
 }
+.map img {
+	display: block;
+	width: 100%;
+}
+
+/* Footer */
 #footer {
+	padding: 64px 16px;
+	text-align: center;
+}
+
+#footer * {
+	color: rgba(0, 0, 0, 0.6);
+	margin-bottom: 10px;
+}
+
+#footer .social-list a {
+	display: inline-block;
+	font-size: 20px;
+	text-decoration: none;
+	margin-right: 10px;
+}
+
+#footer .social-list a:hover i {
+	color: rgba(0, 0, 0, 0.4);
 }
 
 /* Modal */
@@ -455,7 +501,6 @@ display: block;
 	padding: 16px;
 	outline: none;
 	border: none;
-
 }
 
 #buy-ticket-btn:hover {
@@ -469,4 +514,100 @@ display: block;
 
 .modal-footer .modal-help a {
 	color: rgb(33, 150, 243);
+}
+
+/* Responsive */
+
+@media (min-width: 1024px) {
+}
+/* Responsive for pc tablet and mobile */
+
+@media (min-width: 740px) and (max-width: 1024px) {
+}
+
+@media (max-width: 740px) {
+	#nav {
+		display: block;
+	}
+	#nav li{
+		display: flex;
+		background-color: rgb(0, 0, 0);
+	}
+	#search {
+		display: none;
+	}
+
+	#hamburger-menu {
+		display: flex;
+		height: var(--header-height);
+		width: var(--header-height);
+		justify-content: center;
+		align-items: center;
+		position: fixed;
+		top: 0;
+		right: 0;
+	}
+
+	#hamburger-menu i {
+		display: block;
+	}
+
+	#hamburger-menu:hover {
+		cursor: pointer;
+		background-color: #ccc;
+		color: #000;
+	}
+
+	#nav {
+		width: 100%;
+	}
+
+	#nav li:first-child {
+		display: inline-block;
+	}
+
+	#nav li a{
+		display: block;
+		width: 100%;
+
+	}
+
+
+
+	li + li {
+		display: block;
+		width: 100%;
+	}
+
+	#about-members,
+	.buy-ticket,
+	.contact-content ,.buy-ticket li{
+		flex-direction: column;
+	}
+
+	.buy-ticket li {
+		display: flex;
+
+		width: 100%;
+	}
+
+
+	.buy-ticket li + li {
+		margin-top: 20px;
+	}
+
+	.contact-form {
+		width: 100%;
+	}
+
+	.contact-form form {
+		width: 100%;
+	}
+	form > .row {
+		display: flex;
+		flex-direction: column ;
+	}
+	form > .row > div{
+	width: 100%;
+	}
 }
